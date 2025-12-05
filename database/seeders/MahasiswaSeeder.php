@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Mahasiswa;
+use App\Models\Dosen;
 
 class MahasiswaSeeder extends Seeder
 {
@@ -18,7 +19,7 @@ class MahasiswaSeeder extends Seeder
             'nim' => '12345678',
             'email' => 'budi@gmail.com',
             'jurusan' => '15',
-            'dosen_id' => '11837',
+            'dosen_id' => $dosen->id,
             'created_at' => date('Y-m-d H:i:s')
         ]);
     }
