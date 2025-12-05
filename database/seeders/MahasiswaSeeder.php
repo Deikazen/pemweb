@@ -18,7 +18,7 @@ class MahasiswaSeeder extends Seeder
             'nim' => '12345678',
             'email' => 'budi@gmail.com',
             'jurusan' => '15',
-            'dosenwali' => '11837',
+            'dosen_id' => '11837',
             'created_at' => date('Y-m-d H:i:s')
         ]);
     }
