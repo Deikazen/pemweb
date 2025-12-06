@@ -3,10 +3,14 @@
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeritaController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('beritas', BeritaController::class);
 
 Route::get('/dashboard', [MahasiswaController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::middleware('auth')->group(function () {
