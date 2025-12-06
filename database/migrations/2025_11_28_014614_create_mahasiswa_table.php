@@ -17,10 +17,14 @@ return new class extends Migration
             $table->string('nim')->unique();
             $table->string('email')->unique();
             $table->string('jurusan');
-            $table->string('tabel_dosen');
-            $table->timestamp('created_at');
+
+            // Tambahkan FK ke tabel dosen
+            $table->foreignId('dosen_id')->constrained('dosen')->cascadeOnDelete();
+
+            $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

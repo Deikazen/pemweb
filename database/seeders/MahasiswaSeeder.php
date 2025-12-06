@@ -14,6 +14,7 @@ class MahasiswaSeeder extends Seeder
      */
     public function run(): void
     {
+        $dosen = Dosen::first();
         Mahasiswa::create([
             'nama' => 'Budi Santoso',
             'nim' => '12345678',

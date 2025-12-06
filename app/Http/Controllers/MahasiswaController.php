@@ -13,7 +13,7 @@ class MahasiswaController extends Controller
     public function index()
     {
         $data = Mahasiswa::with('dosen')->get();
-        dd($data);
+        return view('mahasiswa.index', compact('data'));
     }
 
     /**
